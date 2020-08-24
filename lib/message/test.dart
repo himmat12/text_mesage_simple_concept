@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test001_aleen/message_model.dart';
+import 'package:test001_aleen/message/message_model.dart';
 
 class TestPage extends StatefulWidget {
   @override

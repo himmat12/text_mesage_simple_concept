@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:test001_aleen/provider/data_provider.dart';
 
 class Page2 extends StatelessWidget {
-  int count = 0;
+  // int count = 0;
   @override
   Widget build(BuildContext context) {
     var counterBloc = Provider.of<CounterBloc>(context);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:test001_aleen/page1.dart';
-import 'package:test001_aleen/page2.dart';
+import 'package:test001_aleen/provider/page1.dart';
+import 'package:test001_aleen/provider/page2.dart';
 import 'package:test001_aleen/provider/data_provider.dart';
 
 class CounterPage extends StatelessWidget {
