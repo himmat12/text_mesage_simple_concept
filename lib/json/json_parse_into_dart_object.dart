@@ -2,7 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:test001_aleen/json/user_model.dart';
+import 'package:test001_aleen/json/json_automatic_parsing.dart';
+
+import 'api_models/user_model.dart';
 
 class JsonParsingPage extends StatefulWidget {
   @override
@@ -45,7 +47,27 @@ class _JsonParsingPageState extends State<JsonParsingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("JSON Parsing\nInto DART Object"),
+        title: Text("JSON Parsing\nInto DART Object",
+            style: Theme.of(context)
+                .textTheme
+                .subtitle1
+                .apply(color: Colors.white)),
+        actions: [
+          FlatButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => JsonAutomaticParsing(),
+                    ));
+              },
+              child: Text(
+                  "JSON Serializa\nAutomatically\nWith Code Gen\nLibraries",
+                  style: Theme.of(context)
+                      .textTheme
+                      .caption
+                      .apply(color: Colors.white)))
+        ],
       ),
 
       // parsing raw JSON data
