@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:test001_aleen/json/json_parse_into_dart_object.dart';
 import 'package:test001_aleen/message/test.dart';
 import 'package:test001_aleen/provider/counter_page.dart';
-import 'package:test001_aleen/websocket/websocket_channel.dart';
+
+import 'stream/stream_page.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -38,10 +39,20 @@ class HomePage extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => SocketPage(),
+                    builder: (context) => StreamPage(),
                   ));
             },
-            title: Text("Websocket / Stream Simple concept "),
+            title: Text("Stream Flutter concept "),
+          ),
+          ListTile(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => StreamPage(),
+                  ));
+            },
+            title: Text("Stream integrating Future object into Stream"),
           ),
           ListTile(
             onTap: () {
